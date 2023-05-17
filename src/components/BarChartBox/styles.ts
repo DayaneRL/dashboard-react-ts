@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface ILegendProps {
     color: string;
@@ -6,7 +6,7 @@ interface ILegendProps {
 
 export const Container = styled.div`
     width: 48%;
-    height: 260px;
+    min-height: 260px;
     margin: 10px 0;
     background-color: ${props => props.theme.colors.tertiary};
     color: ${props => props.theme.colors.white};
@@ -15,16 +15,26 @@ export const Container = styled.div`
 `;
 
 export const SideLeft = styled.aside`
+    flex: 1;
     padding: 30px 20px;
-
-    >h2{
-        margin-bottom: 20px;
+    > h2 {
+        margin-bottom: 10px;
+        padding-left: 16px;
     }
 `;
 
+export const SideRight = styled.main`
+   flex: 1;
+   min-height: 150px;
+   display: flex;
+   justify-content: center;
+   padding-top: 35px;
+`;
+
+
 export const LegendContainer = styled.ul`
     list-style: none;
-    height: 160px;
+    height: 175px;
     padding-right: 15px;
     overflow-y: scroll;
 
@@ -46,6 +56,7 @@ export const Legend = styled.li<ILegendProps>`
     display: flex;
     align-items: center;
     margin-bottom: 7px;
+    padding-left: 16px;
     >div {
         background-color: ${props => props.color};
         width: 40px;
@@ -58,11 +69,4 @@ export const Legend = styled.li<ILegendProps>`
     >span{
         margin-left: 5px;
     }
-`;
-
-
-export const SideRight = styled.main`
-    display: flex;
-    flex: 1;
-    justify-content: center;
 `;
