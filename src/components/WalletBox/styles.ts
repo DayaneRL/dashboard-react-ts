@@ -1,8 +1,23 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 interface IContainerProps {
     color: string;
 }
+
+const animate = keyframes`
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    50%{
+        opacity: .3;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+`;
+
 
 export const Container = styled.div<IContainerProps>`
     width: 32%;
@@ -14,6 +29,8 @@ export const Container = styled.div<IContainerProps>`
     padding: 10px 20px;
     position: relative;
     overflow: hidden;
+
+    animation: ${animate} .5s;
 
     >img {
         position: absolute;
@@ -32,5 +49,38 @@ export const Container = styled.div<IContainerProps>`
         font-size: 12px;
         position: absolute;
         bottom: 10px;
+    }
+
+    @media(max-width: 770px){
+        >span{
+            font-size: 14px;
+        }
+
+        >h1{
+            word-wrap: break-word;
+            font-size: 22px;
+
+            >b {
+                display: inline-block;
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    @media(max-width: 420px){
+        width: 100%;
+
+        >h1 {
+            display: flex;
+
+            >b {
+                position: initial;
+                width: auto;
+                font-size: 22px;
+                margin-right: 5px;
+            }
+        }
     }
 `;

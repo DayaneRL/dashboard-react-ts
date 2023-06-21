@@ -239,7 +239,7 @@ const Dashboard: React.FC = () => {
                 color: "#F7931B"
             }, 
             {
-                name: 'Eventual',
+                name: 'Eventuais',
                 amount: amountEventual,
                 percent: percentEventual ? Number(percentEventual.toFixed()) : 0,
                 color: "#E44C4E"
@@ -278,7 +278,7 @@ const Dashboard: React.FC = () => {
                 color: "#F7931B"
             }, 
             {
-                name: 'Eventual',
+                name: 'Eventuais',
                 amount: amountEventual,
                 percent: percentEventual ? Number(percentEventual.toFixed()) : 0,
                 color: "#E44C4E"
