@@ -1,9 +1,9 @@
-## Sistema de dashboard com Ract / Typescript
+## Sistema de dashboard com React / Typescript
 
 Dashboard de consumo de dados de saldo em carteira de entradas/saídas. 
 
 # Como funciona
-Ele le entradas e saídas mensais e:
+Ele lê entradas e saídas mensais e:
 - Calcula se houve ganhos ou percas naquele mês e exibe uma mensagem.
 - Exibe gráficos das entradas e saídas.
 - Mostra um histórico de saldo.
